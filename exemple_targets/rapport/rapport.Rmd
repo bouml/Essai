@@ -1,9 +1,9 @@
 ---
-title: Exemple de rapport `Rmarkdown` en sortie d'un pipeline `targets`
+title: Contrer la crise de reproductibilité: des pistes de solutions
 
 # Use letters for affiliations, numbers to show equal authorship (if applicable) and to indicate the corresponding author
 author:
-  - name: Benjamin Mercier
+  - name: Laurence Boum
     affiliation: a
 
 address:
@@ -11,21 +11,12 @@ address:
     address: Université de Sherbrooke, Départment de biologie, 2500 Boulevard de l'Université, Sherbrooke, Québec, J1K 2R1
 
 abstract: |
-  Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubila
-  coloribus adventus divesque. Loca partibus breve et unum maior stellis inpia et
-  luporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet,
-  solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum. Eurytus auris.
-  Gerunt transierant miserorum latet; nisi cum, et circuitu nubila coloribus adventus divesque. 
-  Loca partibus breve et unum maior stellis inpia et luporum. Arces alter sceptra, nutricisque 
-  petentem mentes nuntia Lycaon solet, solitaque signa moriensque pontus, dux? Corpora 
-  testataque, novo tumidum.
+  Depuis la mise en lumière d’un cas de fraude et de manipulation de données effectuée par Jonathan Pruitt, le débat sur la crise de reproductibilité dans le domaine de la recherche en science est plus d’actualité que jamais. Alors qu’il n’y a pas consensus sur l’étendu de cette crise, force est d’admettre qu’un manque de reproductibilité des études mine la crédibilité des conclusions tirées de ces dernières. La question se pose alors : comment promouvoir la reproductibilité en recherche? Les solutions sont nombreuses et diverses, mais il est impératif de d’exploiter et de démocratiser les outils permettant un travail collaboratif à l’historique documenté, de revoir le rôle des revues et des journaux et leurs exigences ainsi que d’instaurer un changement de culture dans le milieu de la recherche.  
 
 keywords:
-  - Mot-clé
-  - Mot-clé
-  - Optionel
-  - Optionel
-  - Optionel
+  - Reproductibilité
+  - Transparence
+ 
 
 ## must be one of: pnasresearcharticle (usual two-column layout), pnasmathematics (one column layout), or pnasinvited (invited submissions only)
 pnas_type: pnasresearcharticle
@@ -40,113 +31,29 @@ output: rticles::pnas_article
 ---
 
 # Introduction
-**Voici un exemple de citation @berard1994embedding, et en voici deux autres [@berard1994embedding;@belkin2002using;@coifman2005geometric].** 
-Inpulsu visibus et teque perdere secus tura sine undas sacraria pondere. Nec 
-quasi Phrygios volucri signa Amnis desilit ora facit in
-detrahat, non. Et iuvencae sitim natum, sit quid ut sibi nec ardeat, pressa
-fassaque. Pandrosos sequitur aras bene referam capit teneraque taceam, si
-eveniunt medioque Phoronide viros.
-
-# Méthode
-
-Per recepto pugnes. Soror est adiit nusquam, in arserunt nondum tempore
-bracchia. Pater tempora limen. Falcata parentibus dolor et vobis aranea! Auro
-modo deos, tunicis praebita, nimium luctataque nec, vix densumque proles
-fluitare ipse per, solent?
-Pondera abrumpit cum quaeque iuris. Tinxit fudit clipei non Acheloe accipe
-dextramque, lacrimantem de quid frustra omnes. Indigenae exta quamque modo meae,
-detur idem curas prope erat. Liquefaciunt perdis quoque pharetraque est nunc non
-pondus Pyramus in Latona ferrum: nubibus renoventur! Fallacia sonuit Proreus,
-aurora: omen cur a moenia ore ego narret, ego. Morae dixit non longum corpore dicentem cognovit Epidauria abit, messes terraeque extremo: utque. Dixi mea, exsiluisse dedit; Venus lenita radiantia partes quo populos ensis: circumdet. Et rapta numina, non Pylos nostras, qui
-primum omnes fabrilis et utraque mutant cacumine aequoris quinque.
+Qu’est-ce que la reproductibilité? Il s’agit de la capacité de reproduire les résultats et de tirer des conclusions similaires d’une étude en se servant du protocole inital @goodman_what_2016. Selon Victoria Stodden, il existe trois types de reproductibilité : la reproductibilité computationnelle, empirique et statistique. Les enjeux liés à la reproductibilité computationnelle sont ancrés dans la manière de communiquer les résultats en recherche traditionnelle, manière qui ne permet pas d’inclure les détails computationnels nécessaires à la réplication des résultats. Les problèmes liés à la reproductibilité empiriques sont, entre autre, la fraude et la manipulation de donnée alors que la reproductibilité statistique est affectée par les particularités des tests choisis, notamment leur robustesse et leur degré de sensibilité @noauthor_reproducibility_2018. Chaque type de reproductibilité présente ses propres enjeux et il existe heureusement des pistes de solutions spécifiques pour chacun d’entre eux @stodden_reproducible_2012 . 
+Le milieu scientifique tend à avoir de la difficulté à répliquer les résultats obtenus par des études publiées dans diverses revues. En fait plus de 70% des chercheurs ayant tenté de répliquer des études faites par leurs paires n’y sont pas parvenu @baker_1500_2016. Ce qui est maintenant appelé la crise de la reproductibilité érode la confiance dans la littérature scientifique. Que pouvons-nous faire en tant que scientifiques pour assurer la crédibilité et la robustesse des conclusions qui résultent des études? Trois pistes de solutions sont présentées dans les prochaines lignes, soit l’automation du traitement de données, la révision du rôle des revues scientifiques et finalement l’établissement une culture propice à la reproductibilité
 
 
-Lorem markdownum moveo flagellis torusque monte maestisque praemia arces
-coniunx, qui fuit? Nec cinctam natus. Defossos egregius. Imago una paterno
-pavido me chlamydis civilique feros.
-
-## Première partie
-
-Lorem markdownum et est, an mane luctu iugis ignibus in hostia peragit dum eadem
-equinis, par gradus ubi! Silet canities sine dedecet, fides virum capro:
-loquuntur ante. Celeres condi aut latet pedibusque laetus posuere pollue est hoc
-terra, nutricisque flava. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubila coloribus adventus divesque. Loca partibus breve et unum maior stellis inpia et
-luporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet,
-solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubilacoloribus adventus divesque. Loca partibus breve et unum maior stellis inpia etluporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet, solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum.
-
-Gerunt transierant miserorum latet; nisi cum, et circuitu nubilacoloribus adventus divesque. Loca partibus breve et unum maior stellis inpia etluporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet, solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum.
-
-## Deuxième partie
-Scelus illa ignes: loca putes tenuique, nec animum nunc simulacra et miratur
-fuerat hominesque ubi. Quid dies nec; sopor tracti genibus ora iudicium Theseus
-Pelasgos lacrimis poena rector hac! Nitidum dextro. Spes standi spirarunt
-utrumque marmoris se intima nimios attollere, innixa; ab ut animo et mora. Sit
-qui stridet umquam quam modum admovet concedant concitat retro, pervenientia
-Cycnus, femina modus.
-
-# Résultats
-
-Tyriam et Cererem secura genetivaque exiguo an mitra sine omnem siderea attollit
-missa. Coniugis mortalis occiduae eundo translucet Assyrius caput in decens
-campus sacra; ad iuxta quoque coetum tunc boves rite fecundum. Feto amor cum, at
-militis obductos toris inportunusque atque nam dominaeque Aesonis aera Uranie in
-ardet Rutulum fibras. Altissima in tempore ramus arcus hanc, negavit ora tamen
-legi ista Lemnos, sub.
-
-**Voici comment inclure une figure .pdf préalablement générée et la citer/référencer dans le texte, via son `label`: Figure \ref{fig:plot1}**. 
-
-Amnis novos illuc cultusque: parvoque nimiumque murra simplicitas.
-
-![Espace pour graphique de régression linéaire. \label{fig:plot1}]("../results/plot_lm.pdf"){ width=50% height=40%}
-
-Lorem markdownum et est, an mane luctu iugis ignibus in hostia peragit dum eadem
-equinis, par gradus ubi! Silet canities sine dedecet, fides virum capro:
-loquuntur ante. Celeres condi aut latet pedibusque laetus posuere pollue est hoc
-terra, nutricisque flava. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubila coloribus adventus divesque. Loca partibus breve et unum maior stellis inpia et
-luporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet,
-solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubilacoloribus adventus divesque. Loca partibus breve et unum maior stellis inpia etluporum. Loca partibus breve et unum maior stellis inpia etluporum.
+# Automation du traitement de données
+La science est une affaire de données. C’est donc sans surprise qu’un des problèmes de reproductibilité principaux est issu du fait que le traitement des métadonnées est effectué de façon manuelle et n’est pas documenté de façon adéquate @stodden_reproducible_2012. Afin d’assurer un niveau de fiabilité et de transparence accru, l’idéal est d’automatiser le plus grand nombre d’étapes liées à l’analyse de métadonnées. Les calculs manuels devraient donc remplacés par des scripts, et toutes les figures, produites par un code plutôt qu’avec un GUI. Les outils informatiques d’analyse de données comme le langage R ou Python impliquent du codage informatique, ce qui permet de traiter l’information de façon efficace. Ils offrent aussi la possibilité de rendre disponible les modifications faites au fil du processus d’analyse. Entreposer le code dans des dépôts ordonnés dans lesquels tous les changements sont enregistrés et où toutes les versions antérieures sont accessibles fait aussi partie de la solution pour rendre le traitement de données plus transparent @reed_primer_2018. Le contrôle de version est un outils essentiel pour assurer la reproductibilité c’est pourquoi l’utilisation de plateformes qui permettent le travail en collaboration centralisé est un outil important pour augmenter la reproductibilité.
 
 
-Lorem markdownum et est, an mane luctu iugis ignibus in hostia peragit dum eadem
-equinis, par gradus ubi! Silet canities sine dedecet, fides virum capro:
-loquuntur ante. Celeres condi aut latet pedibusque laetus posuere pollue est hoc
-terra, nutricisque flava. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubila coloribus adventus divesque. Loca partibus breve et unum maior stellis inpia et
-luporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet,
-solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubilacoloribus adventus divesque. Loca partibus breve et unum maior stellis inpia etluporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet, solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum.
+# Rôle des révisions par les pairs et exigences des revues
+Les revues scientifiques peuvent aussi contribuer à améliorer la reproductibilité en recherche. Elles ont un important rôle à jouer, car elles peuvent imposer des pratiques standardisées qui contribuent à la reproductibilité @reed_primer_2018. En effet, peu d’entre elles exigent que les scripts ou que les données brutes soient soumises avec l’article pour une révision. Cependant, de plus de plus de revues exigent que ce type de matériel soit accessible au public via un dépôt en ligne comme Zenodo @reed_primer_2018. Malheureusement, les enquêtes faites à présent suggèrent que le matériel partagé par les auteurs dans ces dépôt permanents en ligne est souvent insuffisant pour assurer la reproductibilité de leur expérience @reed_primer_2018. 
+Une mesure qui contriburait à améliorer la reproductibilité statistique serait que les revues exigent que les tests qui ont produit des résultats non statistiquement significatifs soient inclus dans le matériel supplémentaire. Cette mesure contribuerait à la création d’un narratif cohérent, à limiter les biais en plus de réduire les motivations de trafiquer les données pour qu’elles donnent des résultats significatifs. Dans l’idée d’améliorer la reproductibilité statistique et empirique, plusieurs journaux tels que Nature et Science ont introduit des listes de vérification qui exigent que les études soient randomisées (randomizing) et en double aveugle (blinding) et certaines revues ont aussi inclus des statisticiens à leur panel de révision @buck_solving_2015. 
+D’autres initiatives des revues scientifiques pourraient aussi participer à l’amélioration de la reproductibilité en science. C’est notamment le cas l’implémentation de Plans de Pré-Analyse (PAPs). Il s’agit d’un document dans lequel le chercheur décrit de façon exhaustive les méthodes de collections de données, les hypothèses auxquelles l’étude souhaite répondre ainsi que la manière dont les données vont être traitées @stodden_reproducible_2012. Ce document est fourni avant que les données soient récoltées et analysées, ce qui force les chercheurs à avoir un plan élaboré et rigoureux qui limite entre autre le biais de confirmation @reed_primer_2018. Cette initiative permettrait entre autre de limiter le p-hackin @reed_primer_2018. 
 
-# Discussion
+# Culture et education
+Les résultats d’un sondage issu d’un article publié par Nature démontrent que plus de 60% des répondants soutiennent qu’un des facteurs contribuant au problème de reproductibilité était la pression de publier ainsi que le choix de ne publier que des résultats probants. Dans le domaine de la recherche, les marqueurs de succès qui déterminent la progression d’un carrière sont les publications. Les publications à haut impact qui présentent des résultats probants et choquants dictent le financement des futures recherches. Cela a pour conséquence d’encourager la publication de résultats spectaculaires plutôt que sobres mais bien étayés. Dans le milieu scientifique, l’accent est mis sur la publication de nouvelles conclusions frappantes, ce qui réduit considérablement l’attrait de publier des études qui testent la reproductibilité d’expériences préalablement publiées. Il y a cependant des avancées autour de cet enjeu, puisqu’en 2016, un canal spécifiquement dédié à la publication d’études vérifiant la reproductibilité (Preclinical Reproducibility and Robustness) a été fondé sur la plateforme F1000Research @buck_solving_2015. Encourager une culture favorisant la reproductibilité au sein d’un groupe de recherche est aussi partie intégrante de la solution contre le problème actuel. Il est primordial que les membres dirigeant le groupe de recherche s’assurent que les buts ainsi que les méthodes d’analyse soient clairs et bien compris par tous les collaborateurs. 
 
-Per recepto pugnes. Soror est adiit nusquam, in arserunt nondum tempore
-bracchia. Pater tempora limen. Falcata parentibus dolor et vobis aranea! Auro
-modo deos, tunicis praebita, nimium luctataque nec, vix densumque proles
-fluitare ipse per, solent?
-Pondera abrumpit cum quaeque iuris. Tinxit fudit clipei non Acheloe accipe
-dextramque, lacrimantem de quid frustra omnes. Indigenae exta quamque modo meae,
-detur idem curas prope erat. Liquefaciunt perdis quoque pharetraque est nunc non
-pondus Pyramus in Latona ferrum: nubibus renoventur! Fallacia sonuit Proreus,
-aurora: omen cur a moenia ore ego narret, ego. Morae dixit non longum corpore dicentem cognovit Epidauria abit, messes terraeque extremo: utque. Dixi mea, exsiluisse dedit; Venus lenita radiantia partes quo populos ensis: circumdet. Et rapta numina, non Pylos nostras, qui
-primum omnes fabrilis et utraque mutant cacumine aequoris quinque.
-
-Ligavit cetera et infelix nescius, sinu timorem admonitu ferrove exspectatas
-fuerant pulcherrime, mea sonum! Formae munera, est trahendo regem supplice.
-Verba lacrimis gradus, verbis iam tempore aratri sed, at imagine momordit. Teque
-esse, ante pariter desere in quae: illa socium inque meae: et ipso canos:
-peteretis? Temptanda Daedalus et palmis incumbere tempora ambit.
-
-Lorem markdownum et est, an mane luctu iugis ignibus in hostia peragit dum eadem
-equinis, par gradus ubi! Silet canities sine dedecet, fides virum capro:
-loquuntur ante. Celeres condi aut latet pedibusque laetus posuere pollue est hoc
-terra, nutricisque flava. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubila coloribus adventus divesque. Loca partibus breve et unum maior stellis inpia et
-luporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet,
-solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum. Eurytus auris. Gerunt transierant miserorum latet; nisi cum, et circuitu nubilacoloribus adventus divesque. Loca partibus breve et unum maior stellis inpia etluporum. Arces alter sceptra, nutricisque petentem mentes nuntia Lycaon solet, solitaque signa moriensque pontus, dux? Corpora testataque, novo tumidum.
 
 # Conclusion
 
-Ligavit cetera et infelix nescius, sinu timorem admonitu ferrove exspectatas
-fuerant pulcherrime, mea sonum! Formae munera, est trahendo regem supplice.
-Verba lacrimis gradus, verbis iam tempore aratri sed, at imagine momordit. Teque
-esse, ante pariter desere in quae: illa socium inque meae: et ipso canos:
-peteretis? Temptanda Daedalus et palmis incumbere tempora ambit.
+En conclusion, une des manières les plus efficaces de promouvoir la pratique d’une science reproductible est de rendre disponible des outils open-source et abordables qui permettent aux chercheurs d’avoir un flux d’opération transparent et bien documenté. Assurer la reproductibilité se fait à toutes les étapes de la réalisation d’un projet de recherche, tant au début, dans la définition des buts et l’élaboration des protocoles que vers la fin par les méthodes d’analyse de données. Il n’existe pas de solution miracle qui permettrait d’éradiquer toutes les formes de fraudes, particulièrement avec le développement des outils computationnels qui rendre la manipulation de donnée de plus en plus accessible. Il est cependant possible de prendre des initiatives pour maximiser la reproductibilité. Ces initiatives, en passant par le développement d’outils collaboratifs favorisant la transparence jusqu’au développement d’une culture de partage et d’intégrité intellectuelle contribuent à rendre la science plus reproductible. La poursuite de cet objectif est dans l’intérêt de tous ceux œuvrant dans le milieu de la recherche, car une sciences reproductible est une science fiable. 
+
+**Voici comment inclure une figure .pdf préalablement générée et la citer/référencer dans le texte, via son `label`: Figure \ref{fig:plot1}**. 
+
 
 \newpage
 # Bibliographie{-}
